@@ -44,12 +44,12 @@ select {
 }
 
 .clear {
-    clear: both
+    clear: both;
 }
 
 .pages {
     display: flex;
-    width:60%;
+    width: 60%;
     justify-content: center;
     margin-top: 50px;
 }
@@ -133,16 +133,24 @@ select {
     font: bold 12px/12px HelveticaNeue, Arial;
     padding: 8px 11px;
     text-decoration: none;
+    margin-top: 1em;
 }
 
 .rNo {
-    width: 470px;
+    width: 100%;
     line-height: 25px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 1em 0 1em 0;
+
 }
 
 .Noid {
-    float: left;
-    width: 460px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
 }
 
 .center {
