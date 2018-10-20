@@ -10,7 +10,8 @@ XML 和注解的不同点：XML 和代码是松耦合的；注解和代码在物
 很多情况下，XML 配置其实就是为了分离代码和配置而使用的。但有些场景，我们更希望与代码紧密结合。
 
 ## 最常见的两个 java 注解
-- @Override
+- @Override     
+
 ```
     @Override
     public String toString() {
@@ -30,13 +31,15 @@ import java.lang.annotation.*;
 public @interface Override {
 }
 ```
+
 这妥妥就是一个空的注解，没有属性！没有方法！  
 但 `Override` 这个单词的中文翻译就是`覆盖`，@Override 注解标识了其所标注的方法是在其父类或者其实现的接口中声明的。被 @Override 标注的方法是覆盖或实现已经被声明过的方法。      
 既然，本身不具备任何业务处理能力，那 @Override 又是如何起效的呢？      
 对于 @Override 来说，是编译器在检查所有背其标注的方法，检查父类或者实现的接口里是否有该方法的声明。若不存在，则编译器报错，提醒错误。
 
 - @Deprecated   
-@Deprecated 是长成这样子的：
+@Deprecated 是长成这样子的：        
+
 ```
 package java.lang;
 
@@ -49,12 +52,14 @@ import static java.lang.annotation.ElementType.*;
 public @interface Deprecated {
 }
 ```
+
 没错！这还是一个空注解。        
 程序员使用这个注解是提醒调用者，被其标注的方法是不安全的或者有更好替代方案的，是被废弃的。调用方若使用了被 @Deprecated 标注的方法，在编译时会收到一个警告。
 
 ## 如何创建一个自定义注解
 还是直接端上两个自定义注解再解释吧     
 只有一个属性的自定义注解
+
 ```
 package com.hxx.annotation;
 
@@ -160,7 +165,7 @@ java 8.0 又新增两个可选值：ElementType.TYPE_PARAMETER、ElementType.TYP
 
 ### 注解的使用
 上面定义的 @AnnotationDemo 和 @Author 的用法示例如下： 
-       
+
 ```
 package com.hxx.model;
 
