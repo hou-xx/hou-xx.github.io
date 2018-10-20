@@ -17,7 +17,9 @@ XML 和注解的不同点：XML 和代码是松耦合的；注解和代码在物
         return super.toString();
     }
 ```
+
 点进 `@Override` 后去掉注释是这样的：       
+
 ```
 package java.lang;
 
@@ -64,7 +66,9 @@ public @interface Author {
     String value();
 }
 ```
-多个属性的自定义注解
+
+多个属性的自定义注解      
+
 ```
 package com.hxx.annotation;
 
@@ -85,7 +89,9 @@ public @interface AnnotationDemo {
 
 }
 ```
-其中，`UserType` 是一个枚举
+
+其中，`UserType` 是一个枚举     
+
 ```
 package com.hxx.enums;
 
@@ -153,7 +159,8 @@ java 8.0 又新增两个可选值：ElementType.TYPE_PARAMETER、ElementType.TYP
 注解（Annotations）只支持基本类型、String及枚举类型作为其属性，且所有的属性被定义成方法，并允许提供默认值（default关键字）。      
 
 ### 注解的使用
-上面定义的 @AnnotationDemo 和 @Author 的用法示例如下：
+上面定义的 @AnnotationDemo 和 @Author 的用法示例如下： 
+       
 ```
 package com.hxx.model;
 
@@ -168,6 +175,7 @@ public class Person {
     }
 
 ```
+
 注解名后跟小括号标注其属性。标注方式：`属性名 = 值`，多个属性以 `,` 分隔。有默认值的属性可不赋值。     
 若是注解只有一个属性,可以直接命名为`value`，使用时无需再标明属性名。如：@Author和元注解。
 
