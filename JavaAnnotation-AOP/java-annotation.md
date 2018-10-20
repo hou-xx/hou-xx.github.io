@@ -17,7 +17,7 @@ XML 和注解的不同点：XML 和代码是松耦合的；注解和代码在物
         return super.toString();
     }
 ```
-点进 `@Override` 后去掉注释是这样的：
+点进 `@Override` 后去掉注释是这样的：       
 ```
 package java.lang;
 
