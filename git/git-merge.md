@@ -141,7 +141,22 @@ git push <远程主机名>:<远程分支名>
 //指定默认主机，下次直接 git push 即可
 git push -u <远程主机名> <本地分支名>
 ```
+    
+- **git archive**        
+**导出 commit 的差异文件，且按目录生成，方便提交差分代码**   
+> git diff 取出两个版本之间的差异文件            
+> git archive 打包差异文件(只能在Bash下执行)        
+命令格式
 
+```
+ git archive -o 导出文件名.zip 导出版本号 $(git diff --name-only 旧版本号..新版本号)
+```
+
+示例：
+
+```
+git archive -o patch.zip 035b375 $(git diff --name-only 69351d6..035b375)
+```
 
 
 [1]:https://raw.githubusercontent.com/tianqing2117/DailyProgress/master/image/git/mine-before.png
