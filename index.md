@@ -27,6 +27,6 @@
 [2]: https://hou-xx.github.io/JavaAnnotation-AOP/java-aop-1.html
 [3]: https://hou-xx.github.io/JavaAnnotation-AOP/java-aop-2.html
 [20]: https://hou-xx.github.io/git/git-merge.html
-[30]: https://hou-xx.github.io/linux/TextBrowse.html
+[30]: https://hou-xx.github.io/linux/TextBrowse-Ⅰ.html
 [200]: https://hou-xx.github.io/IdNumGenerate/
 [201]: https://hou-xx.github.io/online-markdown/
