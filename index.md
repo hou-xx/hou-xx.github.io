@@ -11,6 +11,10 @@
 - [git 分支合并][20]
 > 合并两个远程分支
 
+### Linux
+- [ linux 系统文本浏览][30]
+> linux 系统常用文本阅读命令
+
 ### 工具
 + [身份证号码生成器][200]
 + [MarkDown 在线转 Html][201]
@@ -23,5 +27,6 @@
 [2]: https://hou-xx.github.io/JavaAnnotation-AOP/java-aop-1.html
 [3]: https://hou-xx.github.io/JavaAnnotation-AOP/java-aop-2.html
 [20]: https://hou-xx.github.io/git/git-merge.html
+[30]: https://hou-xx.github.io/linux/TextBrowse.html
 [200]: https://hou-xx.github.io/IdNumGenerate/
 [201]: https://hou-xx.github.io/online-markdown/
