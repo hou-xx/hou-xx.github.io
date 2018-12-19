@@ -152,6 +152,13 @@ git push -u <远程主机名> <本地分支名>
  git archive -o 导出文件名.zip 导出版本号 $(git diff --name-only 旧版本号..新版本号)
 ```
 
+- **本地分支与远程分支绑定**    
+> 本地分支切换至待绑定分支后 执行 `git branch --set-upstream-to=origin/远程分支名` 即可与远程分支绑定        
+命令格式
+```
+git branch --set-upstream-to=origin/远程分支名（可通过 `git branch -a` 查看）
+```
+
 示例：
 
 ```
