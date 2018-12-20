@@ -12,8 +12,10 @@
 > 合并两个远程分支
 
 ### Linux
-- [ linux 系统文本浏览Ⅰ][30]
+- [ linux 系统文本浏览 Ⅰ][30]
 > linux 系统基础概念——流、重定向、管道
+- [ linux 系统文本浏览 Ⅱ][31]
+> linux 系统文本浏览 cat、more、less 命令
 
 ### 工具
 + [身份证号码生成器][200]
@@ -28,5 +30,6 @@
 [3]: https://hou-xx.github.io/JavaAnnotation-AOP/java-aop-2.html
 [20]: https://hou-xx.github.io/git/git-merge.html
 [30]: https://hou-xx.github.io/linux/TextBrowse-Ⅰ.html
+[31]: https://hou-xx.github.io/linux/TextBrowse-Ⅱ.html
 [200]: https://hou-xx.github.io/IdNumGenerate/
 [201]: https://hou-xx.github.io/online-markdown/
