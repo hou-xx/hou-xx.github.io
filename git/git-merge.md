@@ -165,6 +165,23 @@ git branch --set-upstream-to=origin/远程分支名（可通过 `git branch -a` 
 git archive -o patch.zip 035b375 $(git diff --name-only 69351d6..035b375)
 ```
 
+## git 库迁移
+
+> 时常需要把 git 项目迁移到新的 git 服务上
+> 要保留完整的 commit 记录及 branches
+
+#### 1. 在新的 git 服务上创建项目（空项目）
+#### 2. clone 裸库
+```
+git clone --bare 原 git 项目地址
+```
+#### 3. 推送镜像到新地址
+```
+git push --mirror 新 git 项目地址
+```
+
+
+
 
 [1]:https://raw.githubusercontent.com/tianqing2117/DailyProgress/master/image/git/mine-before.png
 [2]: https://raw.githubusercontent.com/tianqing2117/DailyProgress/master/image/git/google.png
