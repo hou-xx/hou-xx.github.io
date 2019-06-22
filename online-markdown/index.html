@@ -2,60 +2,98 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=0">
-  <meta name="description" content="Markdown转换工具">
-  <title>Markdown转换工具</title>
-  <script src="./js/index.js"></script>
-  <link rel="stylesheet" href="./themes/github-v2.css" id="codeThemeId" />
-  <link rel="stylesheet" id="pageThemeId" />
-  <style type="text/css">
-  html,
-  body {
-    height: 100%;
-  }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=0">
+    <meta name="description" content="Markdown转换工具">
+    <title>Markdown转换工具</title>
+    <script src="./js/index.js"></script>
+    <script type="text/javascript" src="https://cdn.staticfile.org/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
+    <link rel="stylesheet" href="./themes/github-v2.css" id="codeThemeId" />
+    <link rel="stylesheet" id="pageThemeId" />
+    <style type="text/css">
+    html,
+    body {
+        height: 100%;
+    }
 
-  #input {
-    width: 50%;
-    position: absolute;
-    left: 0px;
-  }
+    #input {
+        width: 50%;
+        position: absolute;
+        left: 0px;
+    }
 
-  #output {
-    width: 50%;
-    position: absolute;
-    left: 50%;
-  }
+    #output {
+        width: 50%;
+        position: absolute;
+        left: 50%;
+    }
 
-  .convert-button,
-  .copy-button {
-    position: inherit;
-  }
-
-  </style>
+    .convert-button,
+    .copy-button {
+        position: inherit;
+    }
+    </style>
 </head>
 
 <body>
-  <!--编辑-->
-  <textarea id="input" spellcheck="false"></textarea>
-  <!--预览-->
-  <div id="output" class="themes-config">
-    <div class="theme-wrapper">
-      <label>页面主题：</label><select class="page-theme"></select><br><br>
-      <label>代码主题：</label><select class="code-theme"></select>
+    <!--编辑-->
+    <textarea id="input" spellcheck="false"></textarea>
+    <!--预览-->
+    <div id="output" class="themes-config">
+        <div class="theme-wrapper">
+            <label>页面主题：</label><select class="page-theme"></select><br><br>
+            <label>代码主题：</label><select class="code-theme"></select>
+        </div>
+        <div class="theme-wrapper">
+            <button class="btn copy-button" data-clipboard-action="cut" data-clipboard-target="#outputCtt">复制</button>
+            <button class="btn copy-button" onclick="save2html()">保存</button>
+        </div>
+        <div class="wrapper" id="outputCtt"></div>
     </div>
-    <div class="theme-wrapper">
-      <button class="btn copy-button" data-clipboard-action="cut" data-clipboard-target="#outputCtt">复制</button>
-    </div>
-    <div class="wrapper" id="outputCtt"></div>
-  </div>
-  <script type="text/javascript">
-  var input = document.getElementById("input").value;
-  if (input == '') {
-    document.getElementById("input").value = '## 把 Markdown 文档内容粘贴至此即可'
-  }
+    <script type="text/javascript">
+    var input = document.getElementById("input").value;
+    if (input == '') {
+        document.getElementById("input").value = '## 把 Markdown 文档内容粘贴至此即可'
+    }
 
-  </script>
+    function save2html(argument) {
+        var httpRequest = new XMLHttpRequest(); //第一步：建立所需的对象
+        httpRequest.open('GET', './themes/github.css', true);
+        httpRequest.send(); //第三步：发送请求  将请求参数写在URL中
+        /**
+         * 获取数据后的处理程序
+         */
+        httpRequest.onreadystatechange = function() {
+            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                var css = httpRequest.responseText;
+                try {
+                    var isFileSaverSupported = !!new Blob;
+                    console.log('isFileSaverSupported --> ' + isFileSaverSupported);
+                } catch (e) {}
+                var fileContent = "<!doctype html>\n" +
+                    "<html>\n" +
+                    "<head>\n" +
+                    "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\">\n" +
+                    "<title>HTML 页面</title>\n" +
+                    "<style type=\"text/css\">" +
+                    +
+                    "</style>" +
+                    "</head>\n" +
+                    css +
+                    "<body>\n" +
+                    document.getElementById("outputCtt").outerHTML + "\n"
+                "</body>\n" +
+                "</html>";
+                var blob = new Blob([fileContent], { type: "text/plain;charset=utf-8" });
+                saveAs(blob, "test.html");
+
+            }
+        };
+
+
+
+    }
+    </script>
 </body>
 
 </html>
