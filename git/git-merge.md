@@ -162,7 +162,20 @@ git branch --set-upstream-to=origin/远程分支名（可通过 `git branch -a` 
 示例：
 
 ```
-git archive -o patch.zip 035b375 $(git diff --name-only 69351d6..035b375)
+git branch --set-upstream-to=origin/1.0.1
+```
+
+- **合并单个 commit 到另一个分支**    
+> 本地分支切换至待合并分支后 执行 `git cherry-pick commit版本号` 即可        
+命令格式
+```
+git cherry-pick commit版本号
+```
+
+示例：
+
+```
+git cherry-pick 62ecb3
 ```
 
 ## git 库迁移
