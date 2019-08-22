@@ -173,6 +173,25 @@ git cherry-pick commit版本号
 git cherry-pick 62ecb3
 ```
 
+- **git 储藏（暂存）**    
+> “储藏”可以获取你工作目录的中间状态——也就是你修改过的被追踪的文件和暂存的变更——并将它保存到一个未完结变更的堆栈中，随时可以重新应用。常发生在分支切换过程。        
+```
+//暂存
+git stash
+//查看暂存列表
+git stash list
+//取出暂存的修改（仅应用，不删除）
+git stash apply --index
+//删除暂存的内容 （名字可由 git stash list 查询）
+git stash drop 暂存名
+// 应用最后一个储藏，并从堆栈中移除（最常用）
+git stash pop
+```
+示例：
+```
+git cherry-pick 62ecb3
+```
+
 ## git 库迁移
 
 > 时常需要把 git 项目迁移到新的 git 服务上
