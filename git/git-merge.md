@@ -146,34 +146,29 @@ git push -u <远程主机名> <本地分支名>
 **导出 commit 的差异文件，且按目录生成，方便提交差分代码**   
 > git diff 取出两个版本之间的差异文件            
 > git archive 打包差异文件(只能在Bash下执行)        
-命令格式
-
 ```
+// 命令格式
  git archive -o 导出文件名.zip 导出版本号 $(git diff --name-only 旧版本号..新版本号)
 ```
 
 - **本地分支与远程分支绑定**    
 > 本地分支切换至待绑定分支后 执行 `git branch --set-upstream-to=origin/远程分支名` 即可与远程分支绑定        
-命令格式
 ```
+//命令格式
 git branch --set-upstream-to=origin/远程分支名（可通过 `git branch -a` 查看）
 ```
-
 示例：
-
 ```
 git branch --set-upstream-to=origin/1.0.1
 ```
 
 - **合并单个 commit 到另一个分支**    
 > 本地分支切换至待合并分支后 执行 `git cherry-pick commit版本号` 即可        
-命令格式
 ```
+//命令格式
 git cherry-pick commit版本号
 ```
-
 示例：
-
 ```
 git cherry-pick 62ecb3
 ```
