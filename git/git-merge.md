@@ -211,6 +211,11 @@ git clone --bare 原 git 项目地址
 git push --mirror 新 git 项目地址
 ```
 
+## git status 中文文件名乱码 
+修改配置即可
+```
+git config --global core.quotepath false
+```
 
 
 
