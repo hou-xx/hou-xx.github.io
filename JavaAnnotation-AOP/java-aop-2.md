@@ -50,7 +50,7 @@ import org.springframework.stereotype.Component;
  * <ul>
  * <li>功能说明：使用 aspactj 注解方式实现 AOP </li>
  * <li>作者：tal on 2018/10/17 0017 17:20 </li>
- * <li>邮箱：houxiangxiang@cibfintech.com</li>
+ * <li>邮箱：hou_xiangxiang@126.com</li>
  * </ul>
  */
 @Aspect
@@ -199,7 +199,7 @@ package com.hxx.api;
  * <ul>
  * <li>功能说明：模拟业务接口</li>
  * <li>作者：tal on 2018/10/18 0018 14:34 </li>
- * <li>邮箱：houxiangxiang@cibfintech.com</li>
+ * <li>邮箱：hou_xiangxiang@126.com</li>
  * </ul>
  */
 
