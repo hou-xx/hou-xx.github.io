@@ -28,13 +28,24 @@
 参考链接： [hibernate][5]                
  [mybatis][6]
 
+### docker
+- 理解 docker 部署原理；
+- 掌握 docker 容器化部署操作方式；
+- 熟悉项目容器化改造。
+参考链接：[docker][7]
+
+### Kubernetes
+- 理解 k8s 基本原理；
+- 熟悉 k8s 常用编排配置；
+参考链接：[Kubernetes][8]
+
 ### 其他
 1. spring、springMVC、springBoot
 1. mysql
 1. Redis
 2. FastDFS
-3. zookeeper
-4. disconf
+3. zookeeper/nacos
+4. apollo
 
 ### 了解
 1. linux
@@ -51,3 +62,5 @@
 [4]: http://www.runoob.com/svn/svn-tutorial.html
 [5]: https://docs.jboss.org/hibernate/orm/3.5/reference/zh-CN/html/index.html
 [6]: http://www.mybatis.org/mybatis-3/zh/index.html
+[7]: https://www.runoob.com/docker/docker-tutorial.html
+[8]: https://www.kubernetes.org.cn/k8s
