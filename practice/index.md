@@ -57,7 +57,7 @@
 
 
 [1]: http://www.runoob.com/maven/maven-tutorial.html
-[2]: https://dubbo.incubator.apache.org/zh-cn/docs/user/quick-start.html
+[2]: https://dubbo.apache.org/zh/docs/v2.7/
 [3]: https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
 [4]: http://www.runoob.com/svn/svn-tutorial.html
 [5]: https://docs.jboss.org/hibernate/orm/3.5/reference/zh-CN/html/index.html
